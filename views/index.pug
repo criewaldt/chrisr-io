@@ -1,0 +1,544 @@
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title Chris Riewaldt | A person on Earth
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content="I like to break stuff, and make stuff.")
+        meta(name='keywords', content='Chris Riewaldt, ChrisR')
+        meta(name='author', content='Chris Riewaldt')
+        link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700', rel='stylesheet', type='text/css')
+        // Animate.css
+        link(rel='stylesheet', href='css/animate.css')
+        // Icomoon Icon Fonts
+        link(rel='stylesheet', href='css/icomoon.css')
+        // Simple Line Icons
+        link(rel='stylesheet', href='css/simple-line-icons.css')
+        // Magnific Popup
+        link(rel='stylesheet', href='css/magnific-popup.css')
+        // Bootstrap
+        link(rel='stylesheet', href='css/bootstrap.css')
+        link(rel='stylesheet', href='css/style.css')
+
+        
+        //favicon
+        link(rel='apple-touch-icon', sizes='57x57', href='/apple-icon-57x57.png')
+        link(rel='apple-touch-icon', sizes='60x60', href='/apple-icon-60x60.png')
+        link(rel='apple-touch-icon', sizes='72x72', href='/apple-icon-72x72.png')
+        link(rel='apple-touch-icon', sizes='76x76', href='/apple-icon-76x76.png')
+        link(rel='apple-touch-icon', sizes='114x114', href='/apple-icon-114x114.png')
+        link(rel='apple-touch-icon', sizes='120x120', href='/apple-icon-120x120.png')
+        link(rel='apple-touch-icon', sizes='144x144', href='/apple-icon-144x144.png')
+        link(rel='apple-touch-icon', sizes='152x152', href='/apple-icon-152x152.png')
+        link(rel='apple-touch-icon', sizes='180x180', href='/apple-icon-180x180.png')
+        link(rel='icon', type='image/png', sizes='192x192', href='/android-icon-192x192.png')
+        link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+        link(rel='icon', type='image/png', sizes='96x96', href='/favicon-96x96.png')
+        link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+        link(rel='manifest', href='/manifest.json')
+        meta(name='msapplication-TileColor', content='#ffffff')
+        meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
+        meta(name='theme-color', content='#ffffff')
+        
+        // Modernizr JS
+        script(src='js/modernizr-2.6.2.min.js')
+        // FOR IE9 below
+        //if lt IE 9
+            script(src='js/respond.min.js')
+            
+        //code prettify
+        script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert")
+        
+        //chrisr.js
+        script(src='js/chrisr.js')
+        
+    body
+        header#fh5co-header(role='banner')
+            .container
+                // <div class="row">
+                nav.navbar.navbar-default
+                    .navbar-header
+                        // Mobile Toggle Menu Button
+                        a.js-fh5co-nav-toggle.fh5co-nav-toggle(style="margin-top:15px;", href='#', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                            i
+                        a.navbar-brand(href='/') ChrisRiewaldt.com
+                    #navbar.navbar-collapse.collapse
+                        ul.nav.navbar-nav.navbar-right
+                            li.active
+                                a(href='#', data-nav-section='home')
+                                    span Home
+                            li
+                                a(href='#', data-nav-section='work')
+                                    span My Work
+                            li
+                                a(href='#', data-nav-section='testimonials')
+                                    span About Me
+                            li
+                                a(href='#', data-nav-section='services')
+                                    span My CV
+                            li
+                                a(href='#', data-nav-section='more')
+                                    span A Bit More...
+                            li
+                                a(href='#', data-nav-section='contact')
+                                    span Social
+                // </div>
+        section#fh5co-home(data-section='home', style='background-image: url(images/paint/clouds.jpg);', data-stellar-background-ratio='0.5')
+            .gradient
+            .container
+                .text-wrap
+                    .text-inner
+                        .row
+                            .col-md-8.col-md-offset-2
+                                h1.to-animate Chris Riewaldt
+                                h2.to-animate
+                                    | A creative person on Earth
+
+            .slant
+        section#fh5co-intro
+            .container
+                .row
+                
+                    .fh5co-block.to-animate(style='background-image: url(images/parse.jpg);')
+                        .overlay-darker
+                        .overlay
+                        .fh5co-text
+                            i.fh5co-intro-icon.icon-github
+                            h2 Software dev
+                            p
+                                | Self-taught full-stack developer
+                            p
+                                | Python, JavaScript, NodeJS, Amazon Web Service, SQL & NoSQL, APIs, REST, data structures, and more.
+                            p
+                                a.btn.btn-primary(href='https://github.com/criewaldt') My GitHub
+                                br
+                    .fh5co-block.to-animate(style='background-image: url(images/linkedin.jpg);')
+                        .overlay-darker
+                        .overlay
+                        .fh5co-text
+                            i.fh5co-intro-icon.icon-briefcase
+                            h2 My CV
+                            p
+                                | A snapshot of my technical skillset and professional experience. 
+                            p
+                                a.btn.btn-primary(href='cv/ChrisRiewaldtCV.pdf') View My CV
+                                br
+                            
+                    .fh5co-block.to-animate(style='background-image: url(images/paint/clouds.jpg);')
+                        .overlay-darker
+                        .overlay
+                        .fh5co-text
+                            i.fh5co-intro-icon.icon-thumbs-up
+                            h2 Let's get social
+                            p
+                                | Hit me up! I'm always looking to connect with new people.
+
+                            ul.social.social-circle
+                                li
+                                    a(href='https://www.instagram.com/criewaldt/')
+                                        i.icon-instagram
+                                li
+                                    a(href='https://www.twitter.com/criewaldt/')
+                                        i.icon-twitter
+                                li
+                                    a(href='https://www.linkedin.com/in/christopher-riewaldt-a21a531b/')
+                                        i.icon-linkedin
+                                
+                            
+                                
+    
+                //.row.watch-video.text-center.to-animate
+                //    span Watch the video
+                //    a.popup-vimeo.btn-video(href='https://vimeo.com/channels/staffpicks/93951774')
+                //        i.icon-play2
+        section#fh5co-work(data-section='work')
+            .container
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate Stuff I've done
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3
+                                    | Just a few pieces of software I've created:
+                .row
+                    .container
+                        .col-sm-4.text-center.well.to-animate
+                            
+                            h4 Example API 1: Sum two numbers
+                            p(style="color:black") Input two numbers and the server will add them and display the results.
+                            .input-group
+                                span(class="input-group-addon" id="basic-addon1") Input a number
+                                input(type="text" class="form-control" id="num1" placeholder="number")
+                            br
+                            .input-group
+                                span(class="input-group-addon" id="basic-addon2") Input another number
+                                input(type="text" class="form-control" id="num2" placeholder="number")
+                            br
+                            .row
+                                h4(id="sumResult")
+                            .row
+                                .col-sm-6
+                                    button(class="btn btn-success" onclick="addApi();") Submit
+                                    br
+                                    br
+                                .col-sm-6
+                                    button(class="btn btn-info" data-toggle="modal" data-target="#sumApi") View Code
+                                    
+                        .col-sm-2
+                        
+                        .col-sm-6.text-center.well.to-animate
+                            h4 Example API 2: Count word frequency via AWS Lambda
+                            p(style="color:black") Input a URL and AWS Lambda will fetch the page and count the words, then display the results.
+                            .input-group
+                                span(class="input-group-addon" id="basic-addon1") Input a URL
+                                input(type="text" class="form-control" id="url" placeholder="http://somewhere.com")
+                            br
+                            .row
+                                #wordloader.hidden
+                                    img(src="./images/loader.gif")
+                                    p(style="color:black") Loading... this may take a minute.
+                                h4(id="wordResult")
+                            .row
+                                .col-sm-6
+                                    button(class="btn btn-success" onclick="wordApi();") Submit
+                                    br
+                                    br
+                                .col-sm-6
+                                    button(class="btn btn-info" data-toggle="modal" data-target="#wordApi") View Code
+                                    
+                        .col-sm-12.text-center.well.to-animate
+                            h4 Example API 3: Is it a palindrome?
+                            p(style="color:black") Input a sequence of characters and the server will tell you if it's a palindrome.
+                            .input-group
+                                span(class="input-group-addon" id="basic-addon1") Input a sequence of characters
+                                input(type="text" class="form-control" id="palindromeWord" placeholder="word, phase, or series of characters")
+                            br
+                            .row
+                                h4(id="palindromeResult")
+                            .row
+                                .col-sm-6
+                                    button(class="btn btn-success" onclick="palindromeApi();") Submit
+                                    br
+                                    br
+                                .col-sm-6
+                                    button(class="btn btn-info" data-toggle="modal" data-target="#palindromeApi") View Code
+                        
+                br       
+                .row.row-bottom-padded-sm
+                    .container
+                        .row
+                            .col-md-4.col-sm-6.col-xxs-12
+                                a.fh5co-project-item.image-popup.to-animate(href="images/esb.jpg")
+                                    img.img-responsive(src="images/esb.jpg", alt="ExchangeStreetBarber.com")
+                                    .fh5co-text
+                                        h2 ExchangeStreetBarber.com
+                                        br
+                                        span A barbershop business homepage with 24/7 Booking via Vagaro: Node/Express on Heroku
+                            .col-md-4.col-sm-6.col-xxs-12
+                                a.fh5co-project-item.image-popup.to-animate(href="images/advertapi.jpg")
+                                    img.img-responsive(src="images/advertapi.jpg", alt="AdvertAPI.com")
+                                    .fh5co-text
+                                        h2 AdvertAPI.com
+                                        br
+                                        span An advertising platform for real estate agents: Python/Flask with AWS DynamoDB & Lambda on PythonAnywhere
+                            .col-md-4.col-sm-6.col-xxs-12
+                                a.fh5co-project-item.image-popup.to-animate(href="images/chrisriewaldt.jpg")
+                                    img.img-responsive(src="images/chrisriewaldt.jpg", alt="ChrisRiewaldt.com")
+                                    .fh5co-text
+                                        h2 ChrisRiewaldt.com (This website)
+                                        br
+                                        span A website about me: Node/Express on Heroku
+                        .row
+                            .col-md-4.col-sm-6.col-xxs-12
+                                a.fh5co-project-item.image-popup.to-animate(href="images/quantipoll.jpg")
+                                    img.img-responsive(src="images/quantipoll.jpg", alt="QuantiPoll.com")
+                                    .fh5co-text
+                                        h2 QuantiPoll.com
+                                        br
+                                        span A place for questions and answers: Node/Express, Sequelize, Postgres, on Heroku
+                            .col-md-4.col-sm-6.col-xxs-12
+                                a.fh5co-project-item.image-popup.to-animate(href="images/parse.jpg")
+                                    img.img-responsive(src="images/parse.jpg", alt="PARSE")
+                                    .fh5co-text
+                                        h2 PARSE
+                                        br
+                                        span A barebones, session-ready stack for Heroku testing & whatever else: Node/Express, Postgres, Angular, Redis, Session, and SocketIO
+                            .col-md-4.col-sm-6.col-xxs-12
+                                a.fh5co-project-item.image-popup.to-animate(href="images/refreshlambda.jpg")
+                                    img.img-responsive(src="images/refreshlambda.jpg", alt="NakedApts-AdvertRefresh-Lambda ")
+                                    .fh5co-text
+                                        h2 NakedApts-AdvertRefresh-Lambda 
+                                        br
+                                        span AWS Lambda to repost NakedApartments ads syndicated from RealtyMX real estate IDX platform, called by AWS API gateway via POST request: Python, AWS Lambda/DynamoDB/API Gateway
+                    
+                    .row.text-center.to-animate
+                        p And more...
+        section#fh5co-testimonials(data-section='testimonials')
+            .container
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate About Me
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                p
+                                | Motivated self-taught full-stack scripter, artist, and comedy lover. Highly ambitious and insatiable desire to learn new technologies and best practices.
+                                | Genuine love for solving problems and helping people.
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate Mission
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                p Work on projects that utilize my creativity, curiosity, and knowledge of advanced technologies.
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate Technical Experience
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                strong Platforms
+                                p Linux/UNIX, Windows, CLI
+                            
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                strong Languages, Frameworks, and Services
+                                p Python, JavaScript, Node.JS, Amazon Web Service, REST API creation & consumption, GitHub, Heroku, PythonAnywhere
+                        .row    
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                strong Data
+                                p SQL, NoSQL, JSON
+                                    br
+                                    | SQLite, DynamoDB, Postgres
+                                    br
+                                    | Sequelize
+                        .row    
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                strong Notable Libraries
+                                br
+                                br
+                                i JavaScript
+                                p Node.JS, Express/Express-Session, boto3, SocketIO, Angular.JS, Passport.JS, Sequelize
+                                i Python
+                                p Flask, BeautifulSoup, SocketIO, Requests
+                
+                
+                        
+                                
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate Professional Experience
+
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3 New York Living Solutions – New York, NY
+                                    br
+                                    small Sept. 2016 to Present
+                                    br
+                                    small Feb. 2010 to June 2014
+                                h4 Licensed Real Estate Salesperson
+                                    br
+                                    | Office Admin | Listings Manager (*Previous)
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                small Created custom software specifically for NYLS to increase lead generation,
+                                    | automated advertising and marketing, and data aggregation and analysis.
+                                br
+                                br
+                                small Continually provide sales and technical support for 40+ agents. 
+                                hr
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3 Douglas Elliman Real Estate - New York, NY
+                                    br
+                                    small June 2014 to Jan. 2016
+                                h4 Licensed Real Estate Salesperson
+                                    br
+                                    | PA to Team Leader – The LoRusso Team
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                small Douglas Elliman Chairman’s Gold Award Winner (2014, 2015)
+                                br
+                                br
+                                small Consistently exceeded sales and operations goals set by Douglas Elliman and The LoRusso Team. 
+                                br
+                                br
+                                small Created and customized software specifically for the LoRusso Team to increase lead generation,
+                                    | automated advertising and marketing, and data aggregation and analysis.
+                                br
+                                br
+                                small Worked directly with the Executive Vice President & Head of Rentals to develop  
+                                    | tools to gather and analyze real estate listing data in real-time.
+                                br
+                                br
+                                small Offered Team Leader position within Douglas Elliman Real Estate.
+                                        
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate Education
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3 Onondaga Community College - Syracuse, NY
+                                h4 BA - Music Performance: 2004 to 2006 (Incomplete)
+                                hr
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3 Amherst Regional High School
+                                h4 Class of 2002
+                                
+                                
+        section#fh5co-services(data-section='services')
+            .container
+                .row.to-animate
+                    .col-md-12.section-heading.text-center
+                        h2.center-border.to-animate Download My CV
+                            br
+                        a.btn.btn-lg.to-animate(href='cv/ChrisRiewaldtCV.pdf', style="color:white") PDF
+                .row.text-center.to-animate
+                    p I'm currently looking for new development opportunities!
+                                    
+        
+        section#fh5co-counters(style='background-image: url(images/paint/clouds.jpg);', data-stellar-background-ratio='0.5')
+            .fh5co-overlay
+            .container
+                .row
+                    .col-md-12.section-heading.text-center.to-animate
+                        h2 Fun Facts
+                .row
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-briefcase.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='23', data-speed='5000', data-refresh-interval='50') 23
+                            span.fh5co-counter-label GitHub Repositories 
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-code.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='1500000', data-to='3000000', data-speed='5000', data-refresh-interval='50') 2343409
+                            span.fh5co-counter-label + New Ads Created via NakedApts SDK
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-cup.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='52034234', data-speed='500000000', data-refresh-interval='50') 1302
+                            span.fh5co-counter-label Cups of Coffee Consumed
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-people.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='sdf', data-speed='5000', data-refresh-interval='50') 52
+                            span.fh5co-counter-label My Appreciation for the StackOverflow Community
+        
+        
+        section#fh5co-about(data-section='more')
+            .container
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate Ok, but who am I?
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3 I'm goofy when appropriate, focused when needed, but always determined to solve problems. 
+                                    | I enjoy taking things apart and putting them back together.
+                                h3 My curiosity and creativity drive my interests in technology, art, and the quest for knowledge.
+                .row.row-bottom-padded-sm.to-animate
+                    .col-md-6.col-md-offset-3.subtext
+                        img.img-responsive(src="images/paint/3.jpg", alt="Some paint")
+                
+                .row
+                    .col-md-12
+                        .fh5co-person.text-center.to-animate
+                            figure
+                                img(src='images/chrisr.jpg', alt='ChrisR')
+                            h3 Chris Riewaldt
+                            span.fh5co-position A person on earth
+                            p
+                                | Check me out on instagram. I take photos because why not?!!
+                            ul.social.social-circle
+                                li
+                                    a(href='https://www.instagram.com/chrisriewaldt/')
+                                        i.icon-instagram
+                    
+        
+        section#fh5co-contact(data-section='contact')
+            .container
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate Get In Touch
+                        h3.to-animate Send a text message for the fastest response.
+                .row.row-bottom-padded-md
+                    .col-md-6.col-md-offset-5.to-animate
+                        h3 Contact & Location
+                        ul.fh5co-contact-info
+                            li.fh5co-contact-address
+                                i.icon-home
+                                | New York, NY
+                                br
+                                | Charleston, SC
+                            li
+                                i.icon-phone
+                                |  (347) 813-1936
+                            li
+                                i.icon-envelope
+                                | criewaldt@gmail.com
+                    
+                    
+        footer#footer(role='contentinfo')
+            a.gotop.js-gotop(href='#')
+                i.icon-arrow-up2
+            .container
+                div
+                    .col-md-12.text-center
+                        p
+                            | © ChrisRiewaldt.com
+        
+        //modals
+        #sumApi.modal.fade(role='dialog')
+            .modal-dialog
+                // Modal content
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal') ×
+                        h4.modal-title Example API 1: Sum two numbers
+                    .modal-body
+                        include sum.html
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+        #wordApi.modal.fade(role='dialog')
+            .modal-dialog
+                // Modal content
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal') ×
+                        h4.modal-title Example API 2: Count word frequency via AWS Lambda
+                    .modal-body
+                        br
+                        include word.html
+                        br
+                        h4 Full AWS Lambda code can be found 
+                            a(href="https://github.com/criewaldt/LambdaWordFrequency") here
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        #palindromeApi.modal.fade(role='dialog')
+            .modal-dialog
+                // Modal content
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal') ×
+                        h4.modal-title Example API 3: Is it a palindrome?
+                    .modal-body
+                        br
+                        include palindrome.html
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+        
+        // jQuery
+        script(src='js/jquery.min.js')
+        // jQuery Easing
+        script(src='js/jquery.easing.1.3.js')
+        // Bootstrap
+        script(src='js/bootstrap.min.js')
+        // Waypoints
+        script(src='js/jquery.waypoints.min.js')
+        // Stellar Parallax
+        script(src='js/jquery.stellar.min.js')
+        // Counter
+        script(src='js/jquery.countTo.js')
+        // Magnific Popup
+        script(src='js/jquery.magnific-popup.min.js')
+        script(src='js/magnific-popup-options.js')
+        // Main JS (Do not remove)
+        script(src='js/main.js')

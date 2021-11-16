@@ -1,0 +1,30 @@
+{
+  "name": "chrisriewaldt",
+  "version": "1.0.0",
+  "description": "A website for ChrisRiewaldt",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/criewaldt/chrisr.git"
+  },
+  "keywords": [
+    "Chris",
+    "Riewaldt",
+    "CV"
+  ],
+  "author": "Chris Riewaldt",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/criewaldt/chrisr/issues"
+  },
+  "homepage": "https://github.com/criewaldt/chrisr#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.2",
+    "pug": "^2.0.0-beta11",
+    "request": "^2.81.0"
+  }
+}
