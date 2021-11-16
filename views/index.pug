@@ -112,7 +112,7 @@ html
                             p
                                 a.btn.btn-primary(href='https://github.com/criewaldt') My GitHub
                                 br
-                    .fh5co-block.to-animate(style='background-image: url(images/linkedin.jpg);')
+                    .fh5co-block.to-animate(style='background-image: url(images/parse.jpg);')
                         .overlay-darker
                         .overlay
                         .fh5co-text
@@ -186,28 +186,10 @@ html
                                     
                         .col-sm-2
                         
-                        .col-sm-6.text-center.well.to-animate
-                            h4 Example API 2: Count word frequency via AWS Lambda
-                            p(style="color:black") Input a URL and AWS Lambda will fetch the page and count the words, then display the results.
-                            .input-group
-                                span(class="input-group-addon" id="basic-addon1") Input a URL
-                                input(type="text" class="form-control" id="url" placeholder="http://somewhere.com")
-                            br
-                            .row
-                                #wordloader.hidden
-                                    img(src="./images/loader.gif")
-                                    p(style="color:black") Loading... this may take a minute.
-                                h4(id="wordResult")
-                            .row
-                                .col-sm-6
-                                    button(class="btn btn-success" onclick="wordApi();") Submit
-                                    br
-                                    br
-                                .col-sm-6
-                                    button(class="btn btn-info" data-toggle="modal" data-target="#wordApi") View Code
+                        
                                     
-                        .col-sm-12.text-center.well.to-animate
-                            h4 Example API 3: Is it a palindrome?
+                        .col-sm-6.text-center.well.to-animate
+                            h4 REST Palindrome ID
                             p(style="color:black") Input a sequence of characters and the server will tell you if it's a palindrome.
                             .input-group
                                 span(class="input-group-addon" id="basic-addon1") Input a sequence of characters
