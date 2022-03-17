@@ -1,0 +1,5 @@
+<form action="/bin/" method="POST">
+  <label for="bin">Enter BIN#:</label><br>
+  <input type="text" id="bin"><br><br>
+  <input type="submit" value="Submit">
+</form>

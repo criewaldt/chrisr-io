@@ -11,7 +11,7 @@ app = Flask(__name__,
 def main():
     return render_template('bin.html')
 
-@app.route('/bin/', methods=['POST'])
+@app.route('/bin/', methods=['GET', 'POST'])
 def bin_num():
     # something
     bin_number = request.form['bin']

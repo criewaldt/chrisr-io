@@ -1,0 +1,5 @@
+<!doctype html>
+<title>BIN# Spreadsheet Document Links</title>
+{% for doc in docs %}
+  <pre><a href="{{doc}}">{{doc}}</a></pre>
+{% endfor %}
