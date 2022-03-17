@@ -1,3 +1,3 @@
-from main.main import app
+from app.app import app
 if __name__ == "__main__":
   app.run()
