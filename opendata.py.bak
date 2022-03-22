@@ -8,18 +8,13 @@ APP_TOKEN = "jRFBgbNXCPdumKaN1BYKLd0kK"
 def pprint(json_item):
     print(json.dumps(json_item, indent=4))
     
-class Spreadsheet():
-    def __init__(self, bin_number, address):
-        self.address = address
+class Spreadsheet(object):
+    def __init__(self, bin_number):
     
-        self.timestr = time.strftime("%Y-%m-%d-%H-%M")
-    
-        self.bin_number = bin_number
         self.book = xlwt.Workbook()
         
         
-        
-        self.sheet = self.book.add_sheet(str(self.bin_number))
+        self.sheet = self.book.add_sheet("ChrisR-IO Output")
         self.current_row = 0
         
         style = xlwt.XFStyle()
@@ -30,8 +25,16 @@ class Spreadsheet():
         style.font = font
         self.style = style
         
-    def Save(self,):
-        self.book.save("output/BIN-{}_{}_{}.xls".format(str(self.bin_number), self.address, self.timestr))
+        self.t = self.timestr()
+        self.bin_number = bin_number
+        
+    
+    def timestr(self,):
+        return time.strftime("%Y-%m-%d-%H-%M")
+        
+    def Save(self, ):
+        
+        self.book.save("output/BIN-{}__{}.xls".format(self.address, self.t))
     
     def Seperator(self,):
         pattern = xlwt.Pattern() # Create the Pattern
@@ -142,19 +145,19 @@ class Spreadsheet():
         
         self.Save()
 
-class GetBin():
+class GetBin(object):
     def __init__(self, bin_number):
-        self.address = "unknown"
         self.bin_number = bin_number
-        
-        print(self.address)
         
         self.bis_jobs = self.bis()
         self.now_jobs = self.now()
         self.violations = self.violations()
         self.ecb = self.ecb()
+    
+    def display_bin(self,):
+        return self.bin_number
         
-        print(self.bin_number.read())
+        
     
     def ecb(self, ):
         print("Looking up ECB violations for BIN#", self.bin_number)
@@ -230,9 +233,6 @@ class GetBin():
         
         now_jobs = []
         for job in r.json():
-            if not self.address:
-                self.address = " ".join([job['house__'], job['street_name']])
-                print("..got the address, its:", self.address)
             if job['filing_status'] != "LOC Issued":
                 
                 try:
@@ -282,9 +282,6 @@ class GetBin():
         #only return jobs that are not signed off
         bis_jobs = []
         for job in r.json():
-            if not self.address:
-                self.address = " ".join([job['house__'], job['street_name']])
-                print("..got the address, its:", self.address)
             if job['job_status'] != "X":
                 
                 
@@ -324,7 +321,7 @@ if __name__ == "__main__":
     bin_num = input("Input BIN# to grab:")
 
     j = GetBin(bin_num)
-    s = Spreadsheet(bin_num, j.address)
+    s = Spreadsheet(bin_num)
 
     for job in j.now_jobs:
         s.Job(job)

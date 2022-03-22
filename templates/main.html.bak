@@ -1,5 +1,3 @@
-<!doctype html>
-<title>BIN# Spreadsheet Document Links</title>
 <head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -11,30 +9,17 @@
 
 <div class="container">
   <div class="row">
+  <div class="row">
     <div class="col-lg">
 
-		<table class="table">
-		  <thead>
-
-		  </thead>
-		  <tbody>
-			
-			{% for doc in docs %}
-			<tr>
-			<th scope="row"></th>
-				<td>
-					<pre><a href="/output/{{doc}}">{{doc}}</a></pre>
-				</td>
-			</tr>
-			{% endfor %}
-			
-			
-		  </tbody>
-		</table>
+		<form action="/bin/" method="POST">
+		<label for="bin">Enter BIN#:</label><br>
+		<input type="text" id="bin" name="bin"><br><br>
+		<input type="submit" value="Submit">
+		</form>
 
 
     </div>
   </div>
+  </div>
 </div>
-
-
