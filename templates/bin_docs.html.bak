@@ -8,21 +8,33 @@
 </head>
 
 
-<table class="table">
-  <thead>
 
-  </thead>
-  <tbody>
-	
-	{% for doc in docs %}
-	<tr>
-	<th scope="row"></th>
-		<td>
-			<pre><a href="/output/{{doc}}">{{doc}}</a></pre>
-		</td>
-	</tr>
-	{% endfor %}
-	
-	
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-lg">
+
+		<table class="table">
+		  <thead>
+
+		  </thead>
+		  <tbody>
+			
+			{% for doc in docs %}
+			<tr>
+			<th scope="row"></th>
+				<td>
+					<pre><a href="/output/{{doc}}">{{doc}}</a></pre>
+				</td>
+			</tr>
+			{% endfor %}
+			
+			
+		  </tbody>
+		</table>
+
+
+    </div>
+  </div>
+</div>
+
+

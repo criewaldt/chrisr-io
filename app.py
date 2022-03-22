@@ -1,25 +1,27 @@
 from flask import Flask, render_template, request, send_from_directory, redirect, url_for
 import os
 
-
 from utils import opendata
 
 def get_files():
     file_list = []
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    output_path = os.path.join(dir_path, "output")
+    output_path = os.path.join(dir_path, "static")
+    output_path = os.path.join(output_path, "output")
     for file in os.listdir(output_path):
         if file.endswith(".xls"):
             file_list.append(file)
     return file_list
 
-app = Flask(__name__,
-            static_url_path='', 
-            static_folder='/output')
+app = Flask(__name__)
 
 @app.route("/")
 def main():
     return render_template('main.html')
+    
+@app.route("/index")
+def index():
+    return render_template('index.html')
     
 @app.route("/docs")
 def bin_docs():
@@ -47,15 +49,16 @@ def bin_num():
         return render_template('bin_docs.html', docs=docs)
         
     else:
-        print("bin incorrect format")
+    
+        print("BIN incorrect format")
         return redirect(url_for('main'))
         
 
     
 
-@app.route('/output/<path:path>')
+@app.route('/static/output/<path:path>')
 def send_report(path):
-    return send_from_directory('output', path)
+    return send_from_directory('static/output', path)
 
 
 

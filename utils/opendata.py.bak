@@ -35,7 +35,7 @@ class Spreadsheet(object):
     def Save(self, ):
         
         
-        self.book.save("./static/output/BIN-{}__{}.xls".format(self.bin_number, self.t))
+        self.book.save("../static/output/BIN-{}__{}.xls".format(self.bin_number, self.t))
     
     def Seperator(self,):
         pattern = xlwt.Pattern() # Create the Pattern
