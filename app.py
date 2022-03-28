@@ -5,12 +5,11 @@ import requests
 from utils import opendata
 from settings.settings import RECAPTCHA_SITE, RECAPTCHA_SECRET 
 
+#is this a production server?
 is_prod = os.environ.get('IS_HEROKU', None)
 if is_prod:
-    recaptcha_site = os.environ.get('RECAPTCHA_SITE')
     recaptcha_secret = os.environ.get('RECAPTCHA_SECRET')
 else:
-    recaptcha_site = RECAPTCHA_SITE
     recaptcha_secret = RECAPTCHA_SECRET
 
 
@@ -23,7 +22,6 @@ def get_files():
         if file.endswith(".xls"):
             file_list.append(file)
     return file_list
-
 
 def verifyRecaptcha(token):
     url = "https://www.google.com/recaptcha/api/siteverify?secret={}&response={}".format(recaptcha_secret, token)
@@ -85,7 +83,7 @@ def bin_num():
     """    
 
     
-
+#send files from static/output folder
 @app.route('/static/output/<path:path>')
 def send_report(path):
     return send_from_directory('static/output', path)

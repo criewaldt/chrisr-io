@@ -9,8 +9,12 @@
         <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <!-- <link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet" /> -->
-		
+
+        		
 		<link href=" {{ url_for('static', filename='css/styles.css') }} " rel="stylesheet" type="text/css" >
+
+
+
 
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -38,7 +42,7 @@
             <div class="container px-4 text-center">
                 <h1 class="fw-bolder">DOB Tools by ChrisR</h1>
                 <p class="lead">A suite of tools to collect and analyze DOB data</p>
-                <img src=" {{ url_for('static',filename='assets/dob.png') }} ">
+                
                 <a class="btn btn-lg btn-light" href="#about">Make a BIN Spreadsheet</a>
 
 
@@ -63,8 +67,13 @@
         <section id="about">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
+
+
+                    
+
                     <div class="col-lg-8">
-                        <h2>BIN# - Data Collection</h2>
+
+                        <h2>BIN# - Data Spreadsheet</h2>
 						
 						
 						
@@ -73,17 +82,17 @@
                             <li>DOB BIS applications</li>
                             <li>DOB Now Build applications</li>
                             <li></li>
-                            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-                            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+                            
                         </ul>
-                        <p class="lead">Once the data is downlaoded, it will be put into a spreadsheet you can download, see below.</p>
+                        <p class="lead">Create and download a spreadsheet .</p>
+                        
+                        <button type="button" class="btn btn-primary">Create a Data Spreadsheet</button>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Services section-->
-		
+
+        <!-- Services section
         <section class="bg-light" id="services">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
@@ -93,21 +102,85 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
         <!-- Contact section-->
         <section id="contact">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Contact us</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                        <h2>Contact Me</h2>
+                        <p class="lead">Have a problem with this service? Have a suggestion to make it better? Send me a message here and I'll get back to you ASAP.</p>
+                    </div>
+                </div>
+
+
+                <div class="row gx-4 justify-content-center">
+
+                    <div class="col-lg-8">
+                        <form action="/email" method="post" role="form" class="php-email-form">
+                            <div class="row">
+            
+                                <div class="col-lg-12">
+                                    <div class="form-group contact-block1">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                                        <div class="validate">
+                                        </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                                        <div class="validate">
+                                    </div>
+                            
+              
+         
+                              
+                            
+
+              
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" rows="12" data-rule="required" data-msg="Please enter a message" placeholder="Message"></textarea>
+
+                                        <div class="validate">
+                                        </div>
+                                    </div>
+
+                            </div>            
+                            <div class="row">
+                                
+              
+                                <div class="col-lg-12 mb-3">
+                                    <div class="loading">Loading</div>
+
+                                    <div class="error-message">Error
+                                    </div>
+                                    <div class="sent-message">Your message has been sent. Thank you!
+                                    </div>
+                            
+              
+                                <div class="col-lg-12">
+                                    <input type="submit" class="btn btn-defeault btn-send" value="Send message">
+                                </div>
+
+                            </div>
+                            <br> 
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6">
+                                    <div class="g-recaptcha" data-sitekey="6LedWREaAAAAAP6omW4g8BqqOjXT_j0Rto4XbOya">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3"></div>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; ChrisR.io</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
