@@ -11,6 +11,9 @@
         <!-- <link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet" /> -->
 		
 		<link href=" {{ url_for('static', filename='css/styles.css') }} " rel="stylesheet" type="text/css" >
+
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     </head>
 	
     <body id="page-top">
@@ -36,6 +39,29 @@
                 <h1 class="fw-bolder">KM Tools by ChrisR</h1>
                 <p class="lead">Grab DOB data by BIN# and put it in an easy to read spreadsheet</p>
                 <a class="btn btn-lg btn-light" href="#about">Make a BIN Spreadsheet</a>
+
+
+
+
+
+
+
+                <form action="?" method="POST">
+                  <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                  <br/>
+                  <input type="submit" value="Submit">
+                </form>
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </header>
         <!-- About section-->

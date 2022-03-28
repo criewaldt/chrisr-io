@@ -2,6 +2,16 @@ from flask import Flask, render_template, request, send_from_directory, redirect
 import os
 
 from utils import opendata
+from settings.settings import RECAPTCHA_SITE, RECAPTCHA_SECRET 
+
+is_prod = os.environ.get('IS_HEROKU', None)
+if is_prod:
+    recaptcha_site = os.environ.get('RECAPTCHA_SITE')
+    recaptcha_secret = os.environ.get('RECAPTCHA_SECRET')
+else:
+    recaptcha_site = RECAPTCHA_SITE
+    recaptcha_secret = RECAPTCHA_SECRET
+
 
 def get_files():
     file_list = []
@@ -59,6 +69,9 @@ def bin_num():
 @app.route('/static/output/<path:path>')
 def send_report(path):
     return send_from_directory('static/output', path)
+
+
+
 
 
 
