@@ -24,7 +24,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">BIN Data</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">BIN Spreadsheets</a></li>
 						
                         <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> -->
 						
@@ -36,8 +36,9 @@
         <!-- Header-->
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
-                <h1 class="fw-bolder">KM Tools by ChrisR</h1>
-                <p class="lead">Grab DOB data by BIN# and put it in an easy to read spreadsheet</p>
+                <h1 class="fw-bolder">DOB Tools by ChrisR</h1>
+                <p class="lead">A suite of tools to collect and analyze DOB data</p>
+                <img src=" {{ url_for('static',filename='assets/dob.png') }} ">
                 <a class="btn btn-lg btn-light" href="#about">Make a BIN Spreadsheet</a>
 
 
@@ -45,12 +46,6 @@
 
 
 
-
-                <form action="?" method="POST">
-                  <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-                  <br/>
-                  <input type="submit" value="Submit">
-                </form>
 
 
 
@@ -69,17 +64,20 @@
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>About this page</h2>
+                        <h2>BIN# - Data Collection</h2>
 						
-						<img src=" {{ url_for('static',filename='assets/dob.png') }} ">
 						
-                        <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+						
+                        <p class="lead">This tool collects and outputs the following data from the DOB:</p>
                         <ul>
-                            <li>Clickable nav links that smooth scroll to page sections</li>
+                            <li>DOB BIS applications</li>
+                            <li>DOB Now Build applications</li>
+                            <li></li>
                             <li>Responsive behavior when clicking nav links perfect for a one page website</li>
                             <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
                             <li>Minimal custom CSS so you are free to explore your own unique design options</li>
                         </ul>
+                        <p class="lead">Once the data is downlaoded, it will be put into a spreadsheet you can download, see below.</p>
                     </div>
                 </div>
             </div>
@@ -90,7 +88,7 @@
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Services we offer</h2>
+                        <h2>BIN# - Spreadsheet Download</h2>
                         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
                     </div>
                 </div>

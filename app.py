@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, send_from_directory, redirect, url_for
 import os
+import requests
 
 from utils import opendata
 from settings.settings import RECAPTCHA_SITE, RECAPTCHA_SECRET 
@@ -23,6 +24,15 @@ def get_files():
             file_list.append(file)
     return file_list
 
+
+def verifyRecaptcha(token):
+    url = "https://www.google.com/recaptcha/api/siteverify?secret={}&response={}".format(recaptcha_secret, token)
+    r = requests.get(url)
+    return r.json()
+
+
+
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -40,6 +50,16 @@ def bin_docs():
 
 @app.route('/bin/', methods=['POST'])
 def bin_num():
+    #recaptcha check
+    recaptcha_token = request.form['g-recaptcha-response']
+    weGood = verifyRecaptcha(recaptcha_token)
+    if weGood['success'] == False:
+        print('we not good - check recaptcha')
+        print(weGood)
+        return redirect(url_for('index'))
+    return redirect(url_for('main'))
+
+    """
     # something
     bin_number = request.form['bin']
     if len(bin_number) == 7 and bin_number.isdigit() ==  True:
@@ -57,12 +77,12 @@ def bin_num():
         
         docs = get_files()
         return render_template('bin_docs.html', docs=docs)
-        
+     
     else:
     
         print("BIN incorrect format")
         return redirect(url_for('main'))
-        
+    """    
 
     
 
